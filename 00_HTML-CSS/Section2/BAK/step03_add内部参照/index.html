@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--ファイルの文字コード-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="widh=device-widh">
+
+    <title>入会申し込み</title>
+    
+    <!--スタイルシート（CSS）内部参照-->
+    <style>
+        p {
+            font-size: 14px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>入会の申し込み</h1>
+    <!--style属性で24pxで設定-->
+    <!--
+        maegin 要素間の余白 全要素同値ならmarginのみで可（省略可能）
+    <h1 style="font-size: 24px; margin-top: 10px; margin-right: 20px; margin-bottom: 30px; margin-left: 40px;" >入会の申し込み</h1>
+    -->
+
+    <!--style属性をインラインで記述-->
+    <p>入会すには、次のフォームをご記入ください</p>
+    <p>メールアドレス：　<input type="email" name="mymail"></p>
+    <p>メールアドレス：　<input type="password" name="password"></p>
+    <button type="submit">送信</button>
+
+</body>
+</html>

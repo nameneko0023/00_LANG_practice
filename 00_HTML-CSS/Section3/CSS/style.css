@@ -1,0 +1,163 @@
+@import url(sanitize.css);
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+body {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.container {
+    /*800px以下の場合は、画面幅を自動調整*/
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin: 0 auto;
+}
+
+header {
+    background-color: #422814;
+    padding: 10px;
+    color: #fff;
+}
+
+/*headerタグのh1要素を指定*/
+/*子孫結合子*/
+header h1{
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+    text-align: center;
+    /*書体設定　サンセリフ体　該当書体データを持っていないと機材ごとに異なるフォントが表示される
+    -> Google fontsを使おう
+    文字数が多いと読み込みが遅くなるため、タイトルくらいにとどめよう*/
+    font-family: 'Sriracha', cursive;
+
+}
+
+.description {
+    /*左に回り込んでいる要素に対して
+    回り込みの解除を行う*/
+    clear: left;
+}
+.description img {
+    /*画像を左に寄せる
+    次行で回り込みが発生する*/
+    float: left;
+    margin: 0 10px 10px 0;
+    /*transition　プロパティ*/
+    transition-property: opacity; /*opacity*/
+    transition-duration: 1s; /*アニメーションを行う時間*/
+    transition-timing-function: ease; /*ease in  ease out  アニメーションエフェクト*/
+    transition-delay: 0ms;  /*アニメーションをかける待ち時間*/
+
+}
+/*カーソルを重ねた時のアクション*/
+.description img:hover {
+    opacity: .5;
+
+}
+
+.infomation h1 {
+    font-size: 18px;
+    margin: 0 10px 10px 0;
+    float: left;
+}
+
+.infomation .type {
+    /*typeの中身*/
+    display: inline;
+    background-color: #E35A4D;
+    padding: 3px 5px;
+    font-size: 80%;
+    color: #fff;
+} 
+
+.content {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.songs {
+    /*明示的な設定　上　左右　下*/
+    margin:0 0 20px;
+
+}
+
+.songs h2 {
+    /*画像による回り込みを解除*/
+    clear: left;
+    font-size: 100%;
+    /*余白をなくす*/
+    margin: 0;
+    background-color: #E6E4DD;
+    padding: 5px 10px;
+}
+
+.somgs ol {
+    padding: 0;
+    /*算用数字　数字を左揃え*/
+    list-style: decimal inside;
+}
+
+.songs li {
+    border-bottom: 1px solid #ccc;
+    /*リスト幅を領域幅に対する割合の設定
+    50％で表示する場合、一行には２つ入る*/
+    width: 50%;
+    /*左から横並び*/
+    float: left;
+    padding: 5px 10px;
+}
+
+/*floatによる回り込みによる背景崩れを解除する*/
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+a {
+    color: #666;
+    /*下線を消したい場合
+    text-decoration: none;
+    */
+}
+
+footer {
+    text-align: center;
+    font-size: 80%;
+}
+
+/*最大画面幅が600pxの時に下記の設定を適応*/
+/*onlyは必須ではないが、過去のWEBブラウザで誤作動を起こりにくくさせる*/
+@media only screen and (max-width: 600px){
+    .description img{
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 5px;
+        
+    }
+
+    header h1 {
+        font-size: 12px;
+
+    }
+
+    .infomation {
+        font-size: 14px;
+    }
+
+    /*回り込みを解除*/
+    .songs li {
+        float: none;
+        /*幅をsong要素（親要素）から継承する*/
+        width: inherit;
+
+    }
+
+}
