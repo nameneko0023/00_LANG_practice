@@ -1,36 +1,142 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viweport" content="width=device-width">
 
-        <title>ご利用アンケート</title>
-        <!--style.cssを後にする-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link ref="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viweport" content="width=device-width">
 
-    </head>
+    <title>ご利用アンケート</title>
+    <!--style.cssを後にする-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
-    <body>
-        <div class="container">
+</head>
 
-            <header>
-                <h1>ご利用アンケート</h1>
-            </header>
-        </div>
+<body>
+    <div class="container">
 
-        <!--hrタグ罫線-->
-        <!--Bootstrap だと画面いっぱいまで広げられないため、containerクラスの外に置く
+        <header>
+            <div class="row">
+                <!--Bootstrapは一行を１２カラム刻み　col-sm-6 6カラム使う-->
+                <div class="col-sm-6" style="background-color: red;">
+                    <h1>ご利用アンケート</h1>
+
+                </div>
+                <!--text-align: right; 右寄せ-->
+                <div class="col-sm-6" style="background-color: blue; text-align: right;">
+                    <a href="/">HOMEへ戻る</a>
+
+                </div>
+
+            </div>
+
+        </header>
+    </div>
+
+    <!--hrタグ罫線-->
+    <!--Bootstrap だと画面いっぱいまで広げられないため、containerクラスの外に置く
         ->Bootstrapを使わないこともあり-->
-        <hr>
-        <hr>
+    <hr>
 
-        <div class="container">
-            <footer>
-                <p>ともすた</p>
-            </footer>
-        </div>
-        
+    <div class="container">
+        <!--PG動作-->
+        <form action="" method="post" class="row">
+            <!--offset-sm-2 右側へ２カラムを埋め合わせる-->
+            <div class="col-sm-8 offset-sm-2">
+                <p>この度は本書をご利用いただきありがとうございます。恐れ入りますが、
+                    以下のフォームにご記入いただき、送信していただけると幸いです。</p>
+                <div class="form-group">
+                    <label for="name">お名前<span class=badge-danger>必須</span></label>
+                    <!--placeholder　薄文字　例文用-->
+                    <input type="text" id="name" name="name" class="form-control" placeholder="例）山田　太郎">
 
-    </body>
+                </div>
+                <!--ドロップダウンリスト-->
+                <div class="form-group">
+                    <label for="job">ご職業</label>
+                    <!--size="5" multiple 複数選択-->
+                    <select id="job" name="job" class="form-control">
+                        <option value="">選択してください</option>
+                        <option value="会社員">会社員</option>
+                        <option value="学生">学生</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>知りたい内容(複数選択可)</label>
+                    <div class="form-check">
+                        <!--チェックボックスの□-->
+                        <input type="checkbox" name="q1" id="q1_1" value="html" class="form-check-imput">
+                        <!--チェックボックスの左の文字 for=id ラベルクリックで同じ操作ができる-->
+                        <label for="q1_1" class="form-check-label">HTML</label>
+
+                    </div>
+                    <div class="form-check">
+                        <!--チェックボックスの□-->
+                        <input type="checkbox" name="q1" id="q1_2" value="css" class="form-check-imput">
+                        <!--チェックボックスの左の文字 for=id ラベルクリックで同じ操作ができる-->
+                        <label for="q1_2" class="form-check-label">CSS</label>
+                        
+                    </div>
+                    <div class="form-check">
+                        <!--チェックボックスの□-->
+                        <input type="checkbox" name="q1" id="q1_3" value="css" class="form-check-imput">
+                        <!--チェックボックスの左の文字 for=id ラベルクリックで同じ操作ができる-->
+                        <label for="q1_3" class="form-check-label">javascript</label>
+                        
+                    </div>
+                    <div class="form-group">
+                        <!--d-block displayプロパティ block 一行文を使って表示する-->
+                        <label class="d-block">理解度はいかがですか</label>
+                        <!--form-check-inline inline属性を付与 前の行と同じ行-->
+                        <div  class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q2" id="q2_1" value="1">
+                            <label for="q2_1" class="form-check-label">理解できなかった</label>
+
+                        </div>
+                        <div  class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q2" id="q2_2" value="1">
+                            <label for="q2_2" class="form-check-label">だいたい理解できた</label>
+
+                        </div>
+                        <div  class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q2" id="q2_3" value="1">
+                            <label for="q2_3" class="form-check-label">理解できた</label>
+
+                        </div>
+                        <div  class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="q2" id="q2_4" value="1">
+                            <label for="q2_4" class="form-check-label">回答しない</label>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="massage">ご意見</label>
+                    <!--row 画面表示行数　設定行数以上の場合スクロールバーが出る-->
+                    <textarea for="massage" id="massage" rows="10" class="form-control"></textarea>
+                </div>
+                <!--class btn btn-XXXX Button tagsを検索-->
+                <!--XXXXは機能の優先順位とする　色は後で変更可-->
+                <button type="submit" class="btn btn-primary">送信する</button>
+
+            </div>
+            </label>
+
+        </form>
+
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <footer>
+            <p>&copy; ともすた</p>
+        </footer>
+    </div>
+
+
+</body>
+
 </html>
