@@ -21,11 +21,9 @@
     <div class="container">
        <script>
         var today = new Date();
-        //getMonth() 1月=0月　としているため　+1 が必要
-        var todayHtml = today.getFullYear() + '/' + (today.getMonth() + 1) 
-        + '/' + today.getDate();
-
-        document.write('<p class="date">' + todayHtml + '</p>');
+        document.write('<p>今日は' + today.getDate() + '日です</p>');
+        //Mathオブジェクトはインスタンス不要
+        document.write(Math.abs(-10));
 
        </script>
     </div>
