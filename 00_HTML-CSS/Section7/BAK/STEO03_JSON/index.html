@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Photos</h1>
+    </header>
+
+    <div class="container">
+        <div id="img_unit">
+
+        </div>
+    </div>
+
+    <script>
+        var images = [
+            //JSON形式
+            {
+                "path": "img/img01.jpg",
+                "name": "name01",
+                "caption": "コメント1"
+            },
+
+            {
+                "path": "img/img02.jpg",
+                "name": "name02",
+                "caption": "コメント2"
+            },
+
+            {
+                "path": "img/img03.jpg",
+                "name": "name03",
+                "caption": "コメント3"
+            }
+        ];
+
+        var img;
+        var caption;
+        var div;
+
+        //写真を表示する
+        for (var i = 0; i < images.length; i++) {
+            //img要素を生成
+            img = document.createElement('img');
+            //src属性を追加して　images[0].pathを指定する。
+            img.setAttribute('src', images[i].path);
+
+            caption = document.createElement('div');
+            caption.className = 'inner';
+            caption.innerHTML = '<p>' + images[i].caption + '<span>' +
+                images[i].name + '</p></span>';
+            /*
+            captionの中身をタグにした結果
+            <div class="inner">
+                <p>images[0].caption<span>images[0].name</span></p>
+            </div>
+            */
+
+            div = document.createElement('div');
+            div.className = 'photo';
+            div.appendChild(img);
+            div.appendChild(caption);
+
+            document.getElementById('img_unit').appendChild(div);
+        }
+    </script>
+
+</body>
+
+</html>

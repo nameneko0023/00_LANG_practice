@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Photos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>My Photos</h1>
+    </header>
+
+    <div class="container">
+        <div id="img_unit">
+        </div>
+    </div>
+
+    <!--JQuery Ajax通信　JSON操作向き-->
+    <!--jsファイルを読み込む-->
+    <script src="js/jquery.min.js"></script>
+    <script>
+        //アドレスから受信できた場合、functionを実行する
+        $.getJSON('https://h2o-space.com/htmlbook/images.php',
+            function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    $('<div class="photo"></div>')
+                        .append('<img src="' + data[i].path + '">') //画像パスの取得
+                        .append('<div class="inner"><p>' + data[i].caption + '<span>' + data[i].name + '</span></p></div>') //文言
+                        .appendTo('#img_unit'); //img_unit
+
+                    /*
+                    <div id="img_unit">
+                        <div class="photo">
+                            <img src="data[i].path">
+                                <div class="inner">
+                                    <p>data[i].caption<span>data[i].name</span></p>
+                                </div>
+                        </div>
+                    </div>
+                    */
+
+                }
+            });
+
+    </script>
+
+</body>
+
+</html>

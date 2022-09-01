@@ -1,34 +1,44 @@
+<!--html:s エメット　記載省略文字-->
 <!DOCTYPE html>
 <html>
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <linc rel="styleseet" href="style.css"></linc>
-    
     <title>TODAY</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <header>
         <h1>TODAY</h1>
     </header>
+
     <div class="container">
-       <script>
-        var today = new Date();
-        //getMonth() 1月=0月　としているため　+1 が必要
-        var todayHtml = today.getFullYear() + '/' + (today.getMonth() + 1) 
-        + '/' + today.getDate();
+        <script>
+            //今日の日付の取得
+            var today = new Date();
+            var todayHtml = today.getFullYear() + '/'
+             + (today.getMonth() + 1) + '/'
+             + today.getDate();
 
-        document.write('<p class="date">' + todayHtml + '</p>');
-
-       </script>
+            document.write('<p class="date">' + todayHtml + '</p>');
+        </script>
+        <!--
+            <p class="date">20xx/01/23</p>
+        -->
     </div>
+
 </body>
 
 </html>

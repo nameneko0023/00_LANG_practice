@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="containier">
+        <p id="timer">00:00:00</p>
+
+
+        <div>
+            <!--btn:クラス　btn-primary:青　btn btn-lg:大きなボタン-->
+            <button id="start_stop" class="btn btn-lg
+            btn-primary">START</button>
+        </div>
+    </div>
+
+    <!-- 00:00:00 -> 00:00:01 へ書き換え-->
+    <!--body最後　herd最後　別ファイルにjsを記載した方がいい-->
+    <script>
+        // (parametor) value: any
+        var addzero = function (value) {
+            if (seconds < 10) {
+                value = '0' + value;
+            }
+            return value;
+        }
+
+            var now = new Date();
+            //秒を取得
+            var seconds = now.getSeconds();
+            seconds = addzero(seconds);
+
+            //分を取得
+            var minutes = now.getMinutes();
+            minutes = addzero(minutes);
+
+            //時を取得
+            var hours = now.getHours();
+            hours = addzero(hours);
+
+            document.getElementById('timer').innerHTML = hours + ':' 
+            + minutes + ':' 
+            + seconds;
+
+    </script>
+
+</body>
+
+</html>

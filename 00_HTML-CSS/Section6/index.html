@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div class="containier">
+        <p id="timer">00:00:00</p>
+
+
+        <div>
+            <!--btn:クラス　btn-primary:青　btn btn-lg:大きなボタン-->
+            <button id="start_stop" class="btn btn-lg
+            btn-primary">START</button>
+        </div>
+    </div>
+
+    <script>
+        var start;
+        var timer_id;
+
+        //「STAER」ボタンクリックイベント
+        document.getElementById('start_stop').addEventListener('click', function () {
+            //STOPボタン押下時
+            if (this.innerHTML === 'START') {
+                start = new Date();
+
+                //間隔を指定する　10ms間隔
+                timer_id = setInterval(goTimer, 10);
+                //window.setInterval(goTimer, 10);  windowは省略可能
+
+                //「STOP」ボタン表示時の挙動
+                //id属性 document.getElementById('start_stop') -> this
+                this.innerHTML = 'STOP';
+                //thisのクラス属性の変更ボタンを赤くする）
+                this.classList.remove('btn-primary');
+                this.classList.add('btn-danger');
+            }
+            //STOPボタン押下時
+            else {
+
+                //windowオブジェクト
+                //setIntervalでセットしたタイマーを止める
+                clearInterval(timer_id);
+
+                this.innerHTML = 'START';
+                this.classList.remove('btn-danger');
+                this.classList.add('btn-primary');
+            }
+        });
+
+        //ゼロを追加する(共通関数)
+        var addZero = function (value) {
+            if (value < 10) {
+                value = '0' + value;
+            }
+            return value;
+        }
+
+        //経過秒数を表示する
+        var goTimer = function () {
+            var now = new Date();
+
+            //ミリ秒 から 秒へ 変換
+            var seconds = Math.floor((now.getTime() - start.getTime()) / 1000);
+            //秒 から 分へ 変換
+            var minuits = Math.floor(seconds / 60);
+            //分　から　時間へ 変換
+            var hours = Math.floor(minuits / 60);
+
+
+            seconds = seconds - minuits * 60;
+            minuits = minuits - hours * 60;
+
+            hours = addZero(hours);
+            minuits = addZero(minuits);
+            seconds = addZero(seconds);
+
+            document.getElementById('timer').innerHTML =
+                hours + ':' + minuits + ':' + seconds;
+        }
+    </script>
+
+</body>
+
+</html>
