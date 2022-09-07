@@ -1,0 +1,29 @@
+.container{
+
+    /**/
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+
+    padding: 30px;
+    width: 500px;
+}
+
+/*ボタン*/
+.btn_control button{
+    padding: 1px 5px 1px 5px;
+}
+
+
+.label{
+    display: none;
+
+    padding: 10px 40px;
+    color: blue;
+    /**/
+    cursor: pointer;
+}
+input[type="file"]{
+    display: none;
+
+}
+
