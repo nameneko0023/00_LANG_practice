@@ -10,20 +10,17 @@
 
 /*ボタン*/
 .btn_control button{
-    padding: 1px 5px 1px 5px;
+    padding: 1px 1px 1px 1px;
 }
 
-
-.label{
-    display: none;
-
-    padding: 10px 40px;
-    color: blue;
-    /**/
-    cursor: pointer;
+/*検索フォーム*/
+.Google{
+    width: 300px;
+    padding: 0 5px 0 10px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
 }
-input[type="file"]{
-    display: none;
-
+.Google input{
+    border: none;
+    outline: none;
 }
-
