@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--1 -->
+    <script>
+        /*アラートダイアログ*/
+        //window.alert("hello world good bye");
+    </script>
+
+    <!--jsファイルを呼び出す-->
+    <!--./ 相対パス-->
+    <!--
+    <script src="inclide_script/main.js"></script>
+     -->
+
+    <!--ブラウザを開く時　scriptタグがあるとHTMLの解析を中断し、jsを実行する
+    jsを実行したあと、HTMLの解析を再開するため、表示に時間がかかる
+　　そのためにscriptにdefer属性を付与することで解決できる-->
+
+    <!--defer属性はjsファイルを読み込むときDOMツリーの構築を完了してから、jsを実行する-->
+    <!--<script src="inclide_script/main.js" defer></script>-->
+
+    <script>
+        //ブラウザのコンソール画面に表示する
+        let val = "hello";
+        console.log(val);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
