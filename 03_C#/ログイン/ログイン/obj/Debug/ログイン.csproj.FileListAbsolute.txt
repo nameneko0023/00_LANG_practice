@@ -1,0 +1,10 @@
+H:\00_LANG_practice\03_C#\ログイン\ログイン\bin\Debug\ログイン.exe.config
+H:\00_LANG_practice\03_C#\ログイン\ログイン\bin\Debug\ログイン.exe
+H:\00_LANG_practice\03_C#\ログイン\ログイン\bin\Debug\ログイン.pdb
+H:\00_LANG_practice\03_C#\ログイン\ログイン\obj\Debug\ログイン.csprojAssemblyReference.cache
+H:\00_LANG_practice\03_C#\ログイン\ログイン\obj\Debug\ログイン.Properties.Resources.resources
+H:\00_LANG_practice\03_C#\ログイン\ログイン\obj\Debug\ログイン.csproj.GenerateResource.cache
+H:\00_LANG_practice\03_C#\ログイン\ログイン\obj\Debug\ログイン.csproj.CoreCompileInputs.cache
+H:\00_LANG_practice\03_C#\ログイン\ログイン\obj\Debug\ログイン.exe
+H:\00_LANG_practice\03_C#\ログイン\ログイン\obj\Debug\ログイン.pdb
+H:\00_LANG_practice\03_C#\ログイン\ログイン\obj\Debug\ログイン.LOGIN.resources
