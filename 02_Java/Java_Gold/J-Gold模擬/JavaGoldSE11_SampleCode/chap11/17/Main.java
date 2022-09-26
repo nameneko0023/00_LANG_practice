@@ -1,0 +1,13 @@
+import java.text.MessageFormat;
+
+public class Main {
+  public static void main(String[] args) {
+    String template = "Ç±ÇÒÇ…ÇøÇÕ{0}Ç≥ÇÒÅBéÑÇÕ{1}Ç≈Ç∑ÅB";
+    Object[][] params = {{"Duke", "Taro"},
+                         {"Nao", "misa"}};
+    MessageFormat mf = new MessageFormat(template);
+    for(Object[] p : params){
+      System.out.println(mf.format(p));
+    }
+  }
+}

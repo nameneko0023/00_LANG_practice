@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LGN001c.cs" />
     <Compile Include="LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>

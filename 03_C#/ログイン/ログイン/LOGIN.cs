@@ -20,25 +20,52 @@ namespace ログイン
 
         private void LOGIN_BTN_Click(object sender, EventArgs e)
         {
+            CHECK_RESET();
+            String[] logininfo = { };
+            logininfo[0] = LOGIN_TXT.Text;
+            logininfo[1] = PASS_TXT.Text;
+
+            INPUT_CHECK(logininfo);
+
+
+
+        }
+
+        private void CHECK_RESET()
+        {
             //
             LOGIN_TXT.BackColor = System.Drawing.SystemColors.Window;
             PASS_TXT.BackColor = System.Drawing.SystemColors.Window;
 
+        }
 
+        private void INPUT_CHECK(String [] LoginInfo)
+        {
+            String loginid = LoginInfo[0];
+            String pass = LoginInfo[1];
 
-            LOGIN_TXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            //文字数チェック
+            if ()
+            {
 
-            PASS_TXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            }
+            else
+            {
+                LOGIN_TXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            }
 
+            if (passresult)
+            {
+                
+            }
+            else
+            {
+                PASS_TXT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            }
+
+            if
+            
         }
     }
 
-    class CHECK_RESULT
-    {
-        //フラグ初期化
-        private int Login_Flg = 0; //(0:8文字以上　1:８文字以下)
-        private int Pass_Flr = 0;  //(0:8文字以上　1:８文字以下)
-        private Check_Result = false;
-            
-    }
 }

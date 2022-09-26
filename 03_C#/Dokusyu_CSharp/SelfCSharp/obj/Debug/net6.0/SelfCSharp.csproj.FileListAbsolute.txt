@@ -1,0 +1,15 @@
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.csproj.AssemblyReference.cache
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.AssemblyInfoInputs.cache
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.AssemblyInfo.cs
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.csproj.CoreCompileInputs.cache
+C:\data2\SelfCSharp\bin\Debug\net6.0\SelfCSharp.exe
+C:\data2\SelfCSharp\bin\Debug\net6.0\SelfCSharp.deps.json
+C:\data2\SelfCSharp\bin\Debug\net6.0\SelfCSharp.runtimeconfig.json
+C:\data2\SelfCSharp\bin\Debug\net6.0\SelfCSharp.dll
+C:\data2\SelfCSharp\bin\Debug\net6.0\ref\SelfCSharp.dll
+C:\data2\SelfCSharp\bin\Debug\net6.0\SelfCSharp.pdb
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.dll
+C:\data2\SelfCSharp\obj\Debug\net6.0\ref\SelfCSharp.dll
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.pdb
+C:\data2\SelfCSharp\obj\Debug\net6.0\SelfCSharp.genruntimeconfig.cache

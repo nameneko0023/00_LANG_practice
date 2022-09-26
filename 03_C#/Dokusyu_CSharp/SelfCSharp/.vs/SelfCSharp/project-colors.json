@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9817e901-4360-4439-a75d-b6c6e9d35c8c": {
+      "ProjectGuid": "9817e901-4360-4439-a75d-b6c6e9d35c8c",
+      "DisplayName": "SelfCSharp",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "その他のファイル",
+      "ColorIndex": -1
+    },
+    "c8299377-d340-41e7-b170-548e97428f07": {
+      "ProjectGuid": "c8299377-d340-41e7-b170-548e97428f07",
+      "DisplayName": "MyApp",
+      "ColorIndex": 1
+    },
+    "83aa2a9a-21cd-4f21-8c46-985077984f02": {
+      "ProjectGuid": "83aa2a9a-21cd-4f21-8c46-985077984f02",
+      "DisplayName": "MyApp",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

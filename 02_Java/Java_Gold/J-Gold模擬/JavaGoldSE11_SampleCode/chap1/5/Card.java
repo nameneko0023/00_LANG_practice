@@ -1,0 +1,1 @@
+enum Card { SPADES, CLUBS, DIAMONDS, HEARTS }

@@ -1,0 +1,6 @@
+C:\data\SelfCSharp\obj\Debug\net48\SelfCSharp.csproj.AssemblyReference.cache
+C:\data\SelfCSharp\obj\Debug\net48\SelfCSharp.csproj.SuggestedBindingRedirects.cache
+C:\data\SelfCSharp\obj\Debug\net48\SelfCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\data\SelfCSharp\obj\Debug\net48\SelfCSharp.AssemblyInfoInputs.cache
+C:\data\SelfCSharp\obj\Debug\net48\SelfCSharp.AssemblyInfo.cs
+C:\data\SelfCSharp\obj\Debug\net48\SelfCSharp.csproj.CoreCompileInputs.cache

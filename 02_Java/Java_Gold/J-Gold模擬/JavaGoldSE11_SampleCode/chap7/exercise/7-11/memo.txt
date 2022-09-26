@@ -1,0 +1,3 @@
+7-11>javac -d out\lib src\lib\*.java
+7-11>javac -d out\client -p out\lib src\client\*.java
+7-11>java -p out\lib;out\client -m client/app.Main

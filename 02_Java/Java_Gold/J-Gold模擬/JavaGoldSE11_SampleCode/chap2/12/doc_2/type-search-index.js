@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"Foo","h":"","u":""},{"l":"MyAnnot","h":"","u":""},{"l":"MyAnnot.RANK","h":"","u":""},{"l":"すべてのクラス","h":"","u":"allclasses-index.html"}]
