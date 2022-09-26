@@ -1,5 +1,5 @@
 @echo off
-rem 7Zipのパスを通す
+rem 
 
 :: ==変数==
 
