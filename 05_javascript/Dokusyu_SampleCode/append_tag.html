@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <container>
+        <div>
+            <button id="ADD">図形を追加する</button>
+        </div>
+        <div>
+            <p>段落1</p>
+            <p>段落2</p>
+        </div>
+    </container>
+
+    <script>
+        $(function () {
+            //最後から1番目bodyタグの末尾の中に以下の要素が追加される
+            $("body:eq(-1)").append("<container>aaa</container>")
+        });
+
+        $(function () {
+            //最後から1番目divタグの末尾の中に以下の要素が追加される
+            $("div:eq(-1)").append("<p>変更3</p>")
+        });
+
+
+        $(function () {
+            //最後から1番目pタグの末尾の中に以下の要素が追加される→<p>タグが入れ子になる
+            $("p:eq(-1)").append("<p>変更4</p>")
+        });
+
+        $(function () {
+            //最後から1番目pタグの末尾の中に以下の要素が追加される→最後の<P>タグの中に入る
+            $("p:eq(-1)").append("変更5")
+        });
+
+    </script>
+</body>
+
+</html>

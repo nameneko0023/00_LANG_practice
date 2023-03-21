@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        var canvas;
+      
+        function PrintPosition(canvas, message) {
+          var context = canvas.getContext('2d');
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          context.font = '12pt "MSゴシック"';
+          context.fillStyle = 'black';
+          context.fillText(message, 32, 48);
+        }
+      
+        function getMousePosition(canvas, evt) {
+          var rect = canvas.getBoundingClientRect();
+          return {
+            x: evt.clientX - rect.left,
+            y: evt.clientY - rect.top
+          };
+        }
+      
+        function draw() {
+          canvas = document.getElementById('SimpleCanvas');
+          var context = canvas.getContext('2d');
+      
+          canvas.addEventListener('mousemove', onmousemove_canvas, false);
+        }
+      
+        function onmousemove_canvas(evt) {
+          var mousePos = getMousePosition(canvas, evt);
+          var message = 'Mouse position X:' + mousePos.x + ', Y:' + mousePos.y;
+          PrintPosition(canvas, message);
+        }
+        </script>
+      </head>
+
+</head>
+<body onload="draw()" style="background-color:#D0D0D0;">
+    <canvas id="SimpleCanvas" width="640" height="360" style="background-color:#FFFFFF;"></canvas>
+    <div>Canvas Demo</div>
+</body>
+</html>
