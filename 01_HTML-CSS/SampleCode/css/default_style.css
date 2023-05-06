@@ -1,0 +1,87 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    height: 10%;
+}
+
+.menue {
+    background-color: red;
+}
+
+.tool {
+    background-color: blue;
+}
+
+.manual {
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navi {
+    height: 100%;
+    width: 20%;
+    border: none;
+    background-color: lightpink;
+    overflow: auto;
+}
+
+.main {
+    height: 100%;
+    width: 60%;
+    border: none;
+    background-color: lightblue;
+    overflow: auto;
+}
+
+.control {
+    height: 100%;
+    width: 20%;
+    border: none;
+    background-color: lightgreen;
+    overflow: auto;
+}
+
+iframe{
+    
+    border: 0;
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+
+}
+
+thead {
+    background-color: grey;
+}
+
+tbody {
+    background-color: white;
+}
+
+.manual.th,
+.manual.td {
+    border: 1px solid black;
+    padding: 0.5em 0.5em;
+}
+
+.manual.th {
+    text-align: center;
+    font-weight: normal;
+}
+
+.manual.td {
+    text-align: left;
+}
+
+.manual.txt {
+    align-content: center;
+    border: solid 1px black;
+}

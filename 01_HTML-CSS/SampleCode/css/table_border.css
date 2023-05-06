@@ -1,0 +1,7 @@
+table {
+    /*表 (<table>) の中のセルが境界を共有するか分離するかを設定します。*/
+    border-collapse: collapse;
+  }
+  th, td {
+    border: solid 1px #333; /* 線の種類 太さ 色 */
+  }

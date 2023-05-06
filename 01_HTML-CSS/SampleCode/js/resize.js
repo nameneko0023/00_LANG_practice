@@ -7,3 +7,7 @@ function init() {
 }
  
 window.onload = init();
+
+function open(){
+    window.open("H:\00_LANG_practice\01_HTML-CSS\SampleCode\NEKO.html","_blank");
+}

@@ -1,0 +1,25 @@
+<!--XXXXX：画面ID　追加後プロパティ画面から設定　RO　追加した画面から参照して自動設定→確認AND変更は手動でもできるようにする-->
+            <div class="display" id="displayXXXXX">
+                <iframe src="H:\00_LANG_practice\01_HTML-CSS\SampleCode\NEKO.html" sandbox="allow-same-origin"></iframe>
+            </div>
+
+            <div class="table" id="tableXXXXX">
+                <table>
+                    <thead>
+                        <th>No</th><th>th1</th><th>th2</th><th>th3</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th><td>td1XXXXXXXXXX</td><td>td2</td><td>td3</td>
+                        </tr>
+                        <tr>
+                            <th>2</th><td>td1</td><td>td2</td><td>td3</td>
+                        </tr>
+                        <tr>
+                            <th>3</th><td>td1</td><td>td2</td><td>td3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="txt" id="txtXXXXX" contenteditable="true"></div>
